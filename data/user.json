@@ -1,0 +1,156 @@
+[
+  {
+    "name": "John",
+    "email": "john@mail.com",
+    "username": "john",
+    "password": "john123",
+    "role": "admin"
+  },
+  {
+    "name": "Jane",
+    "email": "jane@mail.com",
+    "username": "jane",
+    "password": "jane123",
+    "role": "customer"
+  },
+  {
+    "name": "Alice",
+    "email": "alice@mail.com",
+    "username": "alice",
+    "password": "alice123",
+    "role": "admin"
+  },
+  {
+    "name": "Bob",
+    "email": "bob@mail.com",
+    "username": "bob",
+    "password": "bob123",
+    "role": "customer"
+  },
+  {
+    "name": "Charlie",
+    "email": "charlie@mail.com",
+    "username": "charlie",
+    "password": "charlie123",
+    "role": "admin"
+  },
+  {
+    "name": "David",
+    "email": "david@mail.com",
+    "username": "david",
+    "password": "david123",
+    "role": "customer"
+  },
+  {
+    "name": "Eve",
+    "email": "eve@mail.com",
+    "username": "eve",
+    "password": "eve123",
+    "role": "customer"
+  },
+  {
+    "name": "Frank",
+    "email": "frank@mail.com",
+    "username": "frank",
+    "password": "frank123",
+    "role": "customer"
+  },
+  {
+    "name": "Grace",
+    "email": "grace@mail.com",
+    "username": "grace",
+    "password": "grace123",
+    "role": "customer"
+  },
+  {
+    "name": "Henry",
+    "email": "henry@mail.com",
+    "username": "henry",
+    "password": "henry123",
+    "role": "customer"
+  },
+  {
+    "name": "Isabella",
+    "email": "isabella@mail.com",
+    "username": "isabella",
+    "password": "isabella123",
+    "role": "customer"
+  },
+  {
+    "name": "Jack",
+    "email": "jack@mail.com",
+    "username": "jack",
+    "password": "jack123",
+    "role": "customer"
+  },
+  {
+    "name": "Kelly",
+    "email": "kelly@mail.com",
+    "username": "kelly",
+    "password": "kelly123",
+    "role": "customer"
+  },
+  {
+    "name": "Liam",
+    "email": "liam@mail.com",
+    "username": "liam",
+    "password": "liam123",
+    "role": "customer"
+  },
+  {
+    "name": "Mia",
+    "email": "mia@mail.com",
+    "username": "mia",
+    "password": "mia123",
+    "role": "customer"
+  },
+  {
+    "name": "Noah",
+    "email": "noah@mail.com",
+    "username": "noah",
+    "password": "noah123",
+    "role": "customer"
+  },
+  {
+    "name": "Olivia",
+    "email": "olivia@mail.com",
+    "username": "olivia",
+    "password": "olivia123",
+    "role": "customer"
+  },
+  {
+    "name": "Peter",
+    "email": "peter@mail.com",
+    "username": "peter",
+    "password": "peter123",
+    "role": "customer"
+  },
+  {
+    "name": "Quinn",
+    "email": "quinn@mail.com",
+    "username": "quinn",
+    "password": "quinn123",
+    "role": "customer"
+  },
+  {
+    "name": "Ryan",
+    "email": "ryan@mail.com",
+    "username": "ryan",
+    "password": "ryan123",
+    "role": "customer"
+  },
+  {
+    "name": "Sophia",
+    "email": "sophia@mail.com",
+    "username": "sophia",
+    "password": "sophia123",
+    "role": "customer"
+  },
+  {
+    "name": "Thomas",
+    "email": "thomas@mail.com",
+    "username": "thomas",
+    "password": "thomas123",
+    "role": "customer"
+  }
+]

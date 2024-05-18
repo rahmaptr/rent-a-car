@@ -21,8 +21,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Vendor.init({
-    name: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Vendor',

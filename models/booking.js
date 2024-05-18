@@ -21,10 +21,22 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Booking.init({
-    dateBooked: DataTypes.DATE,
-    dateReturned: DataTypes.DATE,
-    carId: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER
+    dateBooked: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    dateReturned: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
+    carId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
   }, {
     sequelize,
     modelName: 'Booking',

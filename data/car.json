@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Toyota Corolla",
+    "capacity": 5,
+    "price": 350000,
+    "vendorId": 2
+  },
+  {
+    "name": "Honda Civic",
+    "capacity": 5,
+    "price": 400000,
+    "vendorId": 3
+  },
+  {
+    "name": "Mitsubishi Mirage",
+    "capacity": 4,
+    "price": 300000,
+    "vendorId": 1
+  },
+  {
+    "name": "Nissan Sentra",
+    "capacity": 5,
+    "price": 450000,
+    "vendorId": 2
+  },
+  {
+    "name": "Ford Focus",
+    "capacity": 4,
+    "price": 300000,
+    "vendorId": 1
+  },
+  {
+    "name": "Chevrolet Cruze",
+    "capacity": 5,
+    "price": 400000,
+    "vendorId": 3
+  },
+  {
+    "name": "Volkswagen Golf",
+    "capacity": 4,
+    "price": 350000,
+    "vendorId": 2
+  },
+  {
+    "name": "Hyundai Elantra",
+    "capacity": 5,
+    "price": 500000,
+    "vendorId": 1
+  },
+  {
+    "name": "Car 9",
+    "capacity": 4,
+    "price": 200000,
+    "vendorId": 2
+  },
+  {
+    "name": "Car 10",
+    "capacity": 5,
+    "price": 300000,
+    "vendorId": 3
+  },
+  {
+    "name": "Car 11",
+    "capacity": 4,
+    "price": 250000,
+    "vendorId": 1
+  },
+  {
+    "name": "Car 12",
+    "capacity": 5,
+    "price": 350000,
+    "vendorId": 2
+  },
+  {
+    "name": "Car 13",
+    "capacity": 4,
+    "price": 300000,
+    "vendorId": 1
+  },
+  {
+    "name": "Car 14",
+    "capacity": 5,
+    "price": 400000,
+    "vendorId": 3
+  },
+  {
+    "name": "Car 15",
+    "capacity": 4,
+    "price": 350000,
+    "vendorId": 2
+  },
+  {
+    "name": "Car 16",
+    "capacity": 5,
+    "price": 450000,
+    "vendorId": 1
+  },
+  {
+    "name": "Car 17",
+    "capacity": 4,
+    "price": 300000,
+    "vendorId": 2
+  },
+  {
+    "name": "Car 18",
+    "capacity": 5,
+    "price": 400000,
+    "vendorId": 3
+  },
+  {
+    "name": "Car 19",
+    "capacity": 4,
+    "price": 350000,
+    "vendorId": 1
+  },
+  {
+    "name": "Car 20",
+    "capacity": 5,
+    "price": 500000,
+    "vendorId": 2
+  }
+]

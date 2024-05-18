@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Big Vendor",
+    "userId": 1
+  },
+  {
+    "name": "Small Vendor",
+    "userId": 3
+  },
+  {
+    "name": "Medium Vendor",
+    "userId": 5
+  }
+]
