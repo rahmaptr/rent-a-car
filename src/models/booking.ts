@@ -50,3 +50,5 @@ Booking.init({
   sequelize: connection,
   tableName: "Bookings"
 });
+
+export default Booking;

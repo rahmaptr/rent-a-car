@@ -2,6 +2,7 @@ import express from 'express';
 import { UserController } from '../controllers/user';
 import { VendorController } from '../controllers/vendor';
 import { CarController } from '../controllers/car';
+import { BookingController } from '../controllers/booking';
 
 const router = express.Router();
 
@@ -22,10 +23,17 @@ router.delete('/vendors/:id', VendorController.deleteVendorById);
 
 // Car Routes
 router.get('/cars', CarController.getAllCar);
-router.get('/cars/:id', CarController.getCarById);
 router.post('/cars', CarController.createCar);
+router.get('/cars/:id', CarController.getCarById);
 router.put('/cars/:id', CarController.updateCar);
-router.patch('/cars/:id/rented', CarController.updateCarRentedStatus);
 router.delete('/cars/:id', CarController.deleteCarById);
+router.patch('/cars/:id/rented', CarController.updateCarRentedStatus);
+
+// Booking Routes
+router.get('/bookings', BookingController.getAllBooking);
+router.post('/bookings', BookingController.createBooking);
+router.get('/bookings/:id', BookingController.getBookingById);
+router.put('/bookings/:id', BookingController.updateBooking);
+router.delete('/bookings/:id', BookingController.deleteBookingById);
 
 export default router;
