@@ -1,5 +1,6 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import connection from "../config/connection"
+import exp from "constants";
 
 interface VendorAttributes {
   id?: number;
@@ -38,3 +39,5 @@ Vendor.init({
   sequelize: connection,
   tableName: "Vendors"
 });
+
+export default Vendor;
