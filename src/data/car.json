@@ -48,73 +48,73 @@
     "vendorId": 1
   },
   {
-    "name": "Car 9",
+    "name": "Daihatsu Xenia",
     "capacity": 4,
     "price": 200000,
     "vendorId": 2
   },
   {
-    "name": "Car 10",
+    "name": "Toyota Fortuner",
     "capacity": 5,
     "price": 300000,
     "vendorId": 3
   },
   {
-    "name": "Car 11",
+    "name": "Hyundai Ioniq",
     "capacity": 4,
     "price": 250000,
     "vendorId": 1
   },
   {
-    "name": "Car 12",
+    "name": "Wuling Confero",
     "capacity": 5,
     "price": 350000,
     "vendorId": 2
   },
   {
-    "name": "Car 13",
+    "name": "Honda Civic",
     "capacity": 4,
     "price": 300000,
     "vendorId": 1
   },
   {
-    "name": "Car 14",
+    "name": "Mitsubishi Mirage",
     "capacity": 5,
     "price": 400000,
     "vendorId": 3
   },
   {
-    "name": "Car 15",
+    "name": "Mitshubishi Pajero",
     "capacity": 4,
     "price": 350000,
     "vendorId": 2
   },
   {
-    "name": "Car 16",
+    "name": "Toyota Avanza",
     "capacity": 5,
     "price": 450000,
     "vendorId": 1
   },
   {
-    "name": "Car 17",
+    "name": "Hyundai Santa Fe",
     "capacity": 4,
     "price": 300000,
     "vendorId": 2
   },
   {
-    "name": "Car 18",
+    "name": "Honda Freed",
     "capacity": 5,
     "price": 400000,
     "vendorId": 3
   },
   {
-    "name": "Car 19",
+    "name": "Hyundai Creta",
     "capacity": 4,
     "price": 350000,
     "vendorId": 1
   },
   {
-    "name": "Car 20",
+    "name": "Toyota Rush",
     "capacity": 5,
     "price": 500000,
     "vendorId": 2

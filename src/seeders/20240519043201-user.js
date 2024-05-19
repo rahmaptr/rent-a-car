@@ -4,7 +4,7 @@ const fs = require('fs');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const users = JSON.parse(fs.readFileSync('./data/user.json', 'utf8'));
+    const users = JSON.parse(fs.readFileSync('./src/data/user.json', 'utf8'));
     users.forEach(user => {
       user.createdAt = new Date();
       user.updatedAt = new Date();
