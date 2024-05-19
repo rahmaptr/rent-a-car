@@ -7,6 +7,7 @@ interface CarAttributes {
   capacity: number;
   price: number;
   vendorId: number;
+  isRented: boolean;
 }
 
 export interface CarInput extends Optional<CarAttributes, "id"> {}
@@ -18,6 +19,7 @@ class Car extends Model<CarAttributes, CarInput> implements CarAttributes {
   public capacity!: number;
   public price!: number;
   public vendorId!: number;
+  public isRented!: boolean;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
@@ -45,8 +47,15 @@ Car.init({
     allowNull: false,
     type: DataTypes.INTEGER
   },
+  isRented: {
+    allowNull: false,
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  },
 }, {
   timestamps: true,
   sequelize: connection,
   tableName: "Cars"
 });
+
+export default Car;
