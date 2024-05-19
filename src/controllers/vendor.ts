@@ -1,28 +1,28 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import VendorModel from '../models/vendor';
 import User from '../models/user';
 
 export class VendorController {
-  static async getAllVendor(_: unknown, res: Response) {
+  static async getAllVendor(_: unknown, res: Response, next: NextFunction) {
     try {
       const vendors = await VendorModel.findAll();
       return res.status(200).json(vendors);
     } catch (error) {
-      throw error;
+      next(error);
     }
   }
 
-  static async getVendorById(req: Request, res: Response) {
+  static async getVendorById(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
       const vendor = await VendorModel.findByPk(id);
       res.status(200).json(vendor);
     } catch (error) {
-      throw error;
+      next(error);
     }
   }
 
-  static async createVendor(req: Request, res: Response) {
+  static async createVendor(req: Request, res: Response, next: NextFunction) {
     try {
       const { name, userId } = req.body;
       const user = await User.findByPk(userId);
@@ -35,11 +35,11 @@ export class VendorController {
       const vendor = await VendorModel.create({ name, userId });
       res.status(201).json(vendor);
     } catch (error) {
-      throw error;
+      next(error);
     }
   }
 
-  static async updateVendor(req: Request, res: Response) {
+  static async updateVendor(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
       const { name, userId } = req.body;
@@ -57,11 +57,11 @@ export class VendorController {
       await vendor.update({ name, userId });
       res.status(200).json(vendor);
     } catch (error) {
-      throw error;
+      next(error);
     }
   }
 
-  static async deleteVendorById(req: Request, res: Response) {
+  static async deleteVendorById(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
       const vendor = await VendorModel.findByPk(id);
@@ -71,7 +71,7 @@ export class VendorController {
       await vendor.destroy();
       res.status(200).json({ message: 'Vendor deleted' });
     } catch (error) {
-      throw error;
+      next(error);
     }
   }
 }
