@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -8,6 +9,7 @@ module.exports = {
     users.forEach(user => {
       user.createdAt = new Date();
       user.updatedAt = new Date();
+      user.password = bcrypt.hashSync(user.password, 8);
     });
     await queryInterface.bulkInsert('Users', users, {});
   },

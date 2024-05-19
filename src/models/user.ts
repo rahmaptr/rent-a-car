@@ -1,5 +1,6 @@
 import { DataTypes, Model, Optional } from "sequelize";
 import connection from "../config/connection";
+import bcrypt from "bcryptjs";
 
 interface UserAttributes {
   id?: number;
@@ -68,4 +69,14 @@ User.init({
   timestamps: true,
   sequelize: connection,
   tableName: "Users",
+  hooks: {
+    beforeCreate: (user) => {
+      user.password = bcrypt.hashSync(user.password, 8);
+    },
+    beforeUpdate: (user) => {
+      user.password = bcrypt.hashSync(user.password, 8);
+    }
+  }
 });
+
+export default User;
