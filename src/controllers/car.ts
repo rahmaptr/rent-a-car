@@ -49,7 +49,7 @@ export class CarController {
       const { isRented } = req.body;
       const booking = await Booking.findOne({ where: { carId: id}})
       if (!booking?.dateReturned) {
-        throw new Error("Car hasn't been returned")
+        throw {message:"Car hasn't been returned"}
       }
       await CarModel.update({ isRented }, { where: { id } });
       res.status(200).json({ message: "Car rented status updated successfully" });

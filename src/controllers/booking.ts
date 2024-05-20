@@ -27,7 +27,7 @@ export class BookingController {
       const { dateBooked, dateReturned, carId, userId } = req.body;
       const car = await Car.findByPk(carId);
       if (car?.isRented) {
-        throw new Error("Car is rented")
+        throw {message: "Car is rented"}
       }
       const booking = await BookingModel.create({ dateBooked, dateReturned, carId, userId });
       res.status(201).json(booking);

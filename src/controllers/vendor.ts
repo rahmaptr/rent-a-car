@@ -27,10 +27,10 @@ export class VendorController {
       const { name, userId } = req.body;
       const user = await User.findByPk(userId);
       if (!user) {
-        throw new Error('Not Found');
+        throw {message: 'Not Found'};
       }
       if (user.role !== 'admin') {
-        throw new Error('Unauthorized');
+        throw {message: 'Unauthorized'};
       }
       const vendor = await VendorModel.create({ name, userId });
       res.status(201).json(vendor);
@@ -44,15 +44,12 @@ export class VendorController {
       const { id } = req.params;
       const { name, userId } = req.body;
       const vendor = await VendorModel.findByPk(id);
-      if (!vendor) {
-        throw new Error("Not Found");
-      }
       const user = await User.findByPk(userId);
-      if (!user) {
-        throw new Error('Not Found');
+      if (!vendor || !user) {
+        throw {message:"Not Found"};
       }
       if (user.role !== 'admin') {
-        throw new Error('Unauthorized');
+        throw {message: 'Unauthorized'};
       }
       await vendor.update({ name, userId });
       res.status(200).json(vendor);
@@ -66,7 +63,7 @@ export class VendorController {
       const { id } = req.params;
       const vendor = await VendorModel.findByPk(id);
       if (!vendor) {
-        throw new Error("Not Found");
+        throw {message: "Not Found"};
       }
       await vendor.destroy();
       res.status(200).json({ message: 'Vendor deleted' });

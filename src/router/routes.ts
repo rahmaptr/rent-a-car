@@ -5,6 +5,8 @@ import { CarController } from '../controllers/car';
 import { BookingController } from '../controllers/booking';
 import { authentication } from '../middleware/authentication';
 import { authorization } from '../middleware/authorization';
+import e from 'express';
+import { errorHandler } from '../middleware/errorHandler';
 
 const router = express.Router();
 
@@ -42,5 +44,7 @@ router.get('/cars/:id', CarController.getCarById);
 router.put('/cars/:id', CarController.updateCar);
 router.delete('/cars/:id', CarController.deleteCarById);
 router.patch('/cars/:id/rented', CarController.updateCarRentedStatus);
+
+router.use(errorHandler)
 
 export default router;
