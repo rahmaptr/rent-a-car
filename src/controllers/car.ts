@@ -61,6 +61,10 @@ export class CarController {
   static async deleteCarById(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
+      const car = await CarModel.findByPk(id);
+      if (car?.isRented) {
+        throw {message: "Car is rented"}
+      }
       await CarModel.destroy({ where: { id } });
       res.status(200).json({ message: "Car deleted successfully" });
     } catch (error) {
