@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import BookingModel from '../models/booking';
+import Car from '../models/car';
 
 export class BookingController {
   static async getAllBooking(_: unknown, res: Response, next: NextFunction) {
@@ -24,6 +25,10 @@ export class BookingController {
   static async createBooking(req: Request, res: Response, next: NextFunction) {
     try {
       const { dateBooked, dateReturned, carId, userId } = req.body;
+      const car = await Car.findByPk(carId);
+      if (car?.isRented) {
+        throw new Error("Car is rented")
+      }
       const booking = await BookingModel.create({ dateBooked, dateReturned, carId, userId });
       res.status(201).json(booking);
     } catch (error) {

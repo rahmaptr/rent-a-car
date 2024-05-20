@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import CarModel from '../models/car';
+import Booking from '../models/booking';
 
 export class CarController {
   static async getAllCar(_: unknown, res: Response, next: NextFunction) {
@@ -46,6 +47,10 @@ export class CarController {
     try {
       const { id } = req.params;
       const { isRented } = req.body;
+      const booking = await Booking.findOne({ where: { carId: id}})
+      if (!booking?.dateReturned) {
+        throw new Error("Car hasn't been returned")
+      }
       await CarModel.update({ isRented }, { where: { id } });
       res.status(200).json({ message: "Car rented status updated successfully" });
     } catch (error) {

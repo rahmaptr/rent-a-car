@@ -22,6 +22,12 @@ export function errorHandler(
       case "Not Found":
         return res.status(404).json({ message: err.message });
 
+      case "Car hasn't been returned":
+        return res.status(400).json({ message: err.message })
+
+      case "Car is rented":
+        return res.status(400).json({ message: err.message })
+
       default:
         break;
     }
