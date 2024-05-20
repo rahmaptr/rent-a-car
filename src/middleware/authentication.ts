@@ -2,7 +2,11 @@ import { Request, Response, NextFunction } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import User from "../models/user";
 
-export async function authentication(req: Request, res: Response, next: NextFunction) {
+interface RequestWithUser extends Request {
+  user?: User;
+}
+
+export async function authentication(req: RequestWithUser, res: Response, next: NextFunction) {
   try {
     const user = req.headers.authorization;
     if (!user) {

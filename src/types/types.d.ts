@@ -1,7 +1,7 @@
 import { Request } from 'express';
 import User from '../models/user';
 
-declare module 'express' {
+declare namespace Express {
   export interface Request {
     user?: User;
   }
